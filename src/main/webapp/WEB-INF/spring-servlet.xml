@@ -1,0 +1,54 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--
+    This tells Springs to enable annotations feature.
+    -->
+    <context:annotation-config/>
+
+    <aop:aspectj-autoproxy />
+    <!-- For annotation based dependency injection i.e. @Component, @Controller, @Service, @Repository, this tag is must.
+         Here we base package value tells springs where it can find beans.-->
+    <context:component-scan base-package="demo.spring.hystrix"/>
+
+    <!-- Springs supports different technologies for View part. We are using JSP.
+    -->
+
+    <!-- {prefix} + {value returned from the controller} + {suffix} is the resulting jsp page i.e. VIEW part of MVC.
+          e.g. if Controller method is returing "Hello" it is mapped to "/WEB-INF/jsp/Hello.jsp" -->
+        <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<!--            <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+            <property name="prefix" value="/WEB-INF/jsp/"/>
+            <property name="suffix" value=".jsp"/>-->
+        </bean>
+    <!-- Messages in the applications can be configured in properties files and
+         then used in the applications at various places. messages property file is
+         src/main/resources/messages_en.properties which is configured as the basename property -->
+    <bean id="messageSource"
+          class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="classpath:messages"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+    <!-- Spring provides facility to inject dependency from external properties files. It takes properties file location.
+         We can also specify mulitple files.-->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location">
+            <value>classpath:app.properties</value>
+        </property>
+    </bean>
+
+</beans>

@@ -1,0 +1,87 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.baeldung:hystrix:jar:1.0
+[WARNING] 'parent.relativePath' of POM com.baeldung:hystrix:1.0 (D:\app\tutorial\springcloud\tutorials-baeldung\hystrix\pom.xml) points at com.baeldung:parent-modules instead of org.springframework.boot:spring-boot-starter-parent, please verify your project structure @ line 11, column 13
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-antrun-plugin/1.8/maven-antrun-plugin-1.8.pom
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-antrun-plugin:1.8: Plugin org.apache.maven.plugins:maven-antrun-plugin:1.8 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-antrun-plugin:jar:1.8
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building hystrix 1.0
+[INFO] ------------------------------------------------------------------------
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-antrun-plugin:1.8: Plugin org.apache.maven.plugins:maven-antrun-plugin:1.8 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-antrun-plugin:jar:1.8
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ hystrix ---
+[INFO] com.baeldung:hystrix:jar:1.0
+[INFO] +- org.springframework.boot:spring-boot-starter-tomcat:jar:1.4.4.RELEASE:provided
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.11:provided
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:8.5.11:provided
+[INFO] |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:8.5.11:provided
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:1.4.4.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:1.4.4.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:1.4.4.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:1.4.4.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:1.4.4.RELEASE:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.1.9:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.1.9:compile
+[INFO] |  |  |  +- org.slf4j:jcl-over-slf4j:jar:1.7.22:compile
+[INFO] |  |  |  +- org.slf4j:jul-to-slf4j:jar:1.7.22:compile
+[INFO] |  |  |  \- org.slf4j:log4j-over-slf4j:jar:1.7.22:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.17:runtime
+[INFO] |  +- org.hibernate:hibernate-validator:jar:5.2.4.Final:compile
+[INFO] |  |  +- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.3.0.Final:compile
+[INFO] |  |  \- com.fasterxml:classmate:jar:1.3.3:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.8.6:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.8.6:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.8.6:compile
+[INFO] |  +- org.springframework:spring-web:jar:4.3.6.RELEASE:compile
+[INFO] |  |  +- org.springframework:spring-beans:jar:4.3.6.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-context:jar:4.3.6.RELEASE:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:4.3.6.RELEASE:compile
+[INFO] |     \- org.springframework:spring-expression:jar:4.3.6.RELEASE:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-aop:jar:1.4.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-aop:jar:4.3.6.RELEASE:compile
+[INFO] |  \- org.aspectj:aspectjweaver:jar:1.8.9:compile
+[INFO] +- com.netflix.hystrix:hystrix-core:jar:1.5.8:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.22:compile
+[INFO] |  +- com.netflix.archaius:archaius-core:jar:0.4.1:compile
+[INFO] |  |  \- commons-configuration:commons-configuration:jar:1.8:compile
+[INFO] |  |     +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] |  |     \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- io.reactivex:rxjava:jar:1.2.0:compile
+[INFO] |  \- org.hdrhistogram:HdrHistogram:jar:2.1.9:compile
+[INFO] +- com.netflix.hystrix:hystrix-metrics-event-stream:jar:1.5.8:compile
+[INFO] |  \- com.netflix.hystrix:hystrix-serialization:jar:1.5.8:runtime
+[INFO] |     +- com.fasterxml.jackson.module:jackson-module-afterburner:jar:2.7.5:runtime
+[INFO] |     \- com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:jar:2.8.6:runtime
+[INFO] +- com.netflix.rxjava:rxjava-core:jar:0.20.7:compile
+[INFO] +- org.hamcrest:hamcrest-all:jar:1.3:test
+[INFO] +- junit:junit:jar:4.12:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- org.springframework:spring-test:jar:4.3.6.RELEASE:test
+[INFO] |  \- org.springframework:spring-core:jar:4.3.6.RELEASE:compile
+[INFO] \- org.springframework.boot:spring-boot-starter-test:jar:1.4.2.RELEASE:test
+[INFO]    +- org.springframework.boot:spring-boot-test:jar:1.4.4.RELEASE:test
+[INFO]    +- org.springframework.boot:spring-boot-test-autoconfigure:jar:1.4.4.RELEASE:test
+[INFO]    +- com.jayway.jsonpath:json-path:jar:2.2.0:test
+[INFO]    |  \- net.minidev:json-smart:jar:2.2.1:test
+[INFO]    |     \- net.minidev:accessors-smart:jar:1.1:test
+[INFO]    |        \- org.ow2.asm:asm:jar:5.0.3:test
+[INFO]    +- org.assertj:assertj-core:jar:2.5.0:test
+[INFO]    +- org.mockito:mockito-core:jar:1.10.19:test
+[INFO]    |  \- org.objenesis:objenesis:jar:2.1:test
+[INFO]    +- org.hamcrest:hamcrest-library:jar:1.3:test
+[INFO]    \- org.skyscreamer:jsonassert:jar:1.3.0:test
+[INFO]       \- org.json:json:jar:20140107:test
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 24.711 s
+[INFO] Finished at: 2017-03-08T14:19:43-08:00
+[INFO] Final Memory: 24M/314M
+[INFO] ------------------------------------------------------------------------
